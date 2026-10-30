@@ -12,11 +12,19 @@ from PIL import Image, ImageOps
 BASE = Path(__file__).parent
 IMG_SIZE = 32
 
-# ---- Project links: replace with real URLs before deploying ----
-GITHUB_URL = "https://github.com/USERNAME/SignSense-AI"
-REPORT_URL = ""
-PPT_URL = ""
-YOUTUBE_URL = ""
+# ---- Project Resources ----
+GITHUB_URL = "https://github.com/fh545599-byte/SignSense-AI"
+
+APP_URL = "https://signsense-ai-gbmrkxzxzmrgkewc7wgdfa.streamlit.app/"
+
+REPORT_URL = "https://github.com/fh545599-byte/SignSense-AI/blob/main/Documentation/SignSense_AI%20Project%20Report.docx"
+
+PPT_URL = "https://github.com/fh545599-byte/SignSense-AI/blob/main/Documentation/SignSense_AI%20Project%20Presentation.pptx"
+
+YOUTUBE_URL = "https://youtu.be/kBSCaga3_IM"
+
+COLAB_URL = "https://colab.research.google.com/drive/1cwysgM-d7CauJfMmzlO6WjpBZxXIzeDM"
+
 DATASET_URL = "https://www.kaggle.com/datasets/meowmeowmeowmeowmeow/gtsrb-german-traffic-sign"
 
 st.set_page_config(page_title="SignSense AI", page_icon="🚦", layout="wide")
@@ -622,10 +630,12 @@ else:
         st.markdown(
             "\n".join(
                 [
+                    link_line("Live Application", APP_URL),
                     link_line("GitHub repository", GITHUB_URL),
                     link_line("Project report", REPORT_URL),
                     link_line("Presentation", PPT_URL),
                     link_line("YouTube video", YOUTUBE_URL),
+                    link_line("Google Colab Notebook", COLAB_URL),
                     link_line("Dataset (Kaggle)", DATASET_URL),
                 ]
             )
